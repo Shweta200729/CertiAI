@@ -20,6 +20,7 @@ import InstructorManage from "./Instructors/InstructorManage";
 import InstructorAdd1 from "./Instructors/InstructorAdd1";
 import InstructorAdd2 from "./Instructors/InstructorAdd2";
 import InstructorViewDetail1 from "./Instructors/InstructorViewDetail1";
+import PaymentsDetailPage from "./Payments/PaymentsDetailPage";
 
 const  LayoutDashboardPage = () => {
   const [dashboard, setDashboard] = useState();
@@ -113,7 +114,7 @@ const  LayoutDashboardPage = () => {
               </div>
             </div>
           </div>
-          <TestTakerMange/>
+          <PaymentsDetailPage/>
          
         </div>
       </div>
