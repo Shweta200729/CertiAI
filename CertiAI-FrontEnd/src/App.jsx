@@ -5,13 +5,18 @@ import './App.css'
 import Navbar from './Components/Navbar'
 
 import LayoutDashboardPage from './AdminDashBoard/LayoutDashboardPage'
+import TestTakerLogin from './Authenticate/TestTakerLogin'
+import TestTakerAdd1 from './AdminDashBoard/TestTakers/TestTakerAdd1'
+import TestTakerMange from './AdminDashBoard/TestTakers/TestTakerMange'
 
 function App() {
  
   return (
     <>
    
-   <LayoutDashboardPage/>
+   {/* <LayoutDashboardPage/> */}
+   <TestTakerLogin/>
+   
 
      
   

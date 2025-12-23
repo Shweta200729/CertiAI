@@ -16,6 +16,10 @@ import TestTakerRemove1 from "./TestTakers/TestTakerRemove1";
 import TestTakerAdd1 from "./TestTakers/TestTakerAdd1";
 import TestTakerRemove2 from "./TestTakers/TestTakerRemove2";
 import TestTakerViewDetails2 from "./TestTakers/TestTakerViewDetails2";
+import InstructorManage from "./Instructors/InstructorManage";
+import InstructorAdd1 from "./Instructors/InstructorAdd1";
+import InstructorAdd2 from "./Instructors/InstructorAdd2";
+import InstructorViewDetail1 from "./Instructors/InstructorViewDetail1";
 
 const  LayoutDashboardPage = () => {
   const [dashboard, setDashboard] = useState();
@@ -24,7 +28,8 @@ const  LayoutDashboardPage = () => {
     <>
       <div className="flex bg-gray-100">
         {/* left part */}
-        <div className="w-[20%] bg-white h-svh">
+        
+        <div className="w-[20%] c fixed  bg-white h-svh">
           {/* image logo */}
           <img
             className="w-[200px] bg-center mt-6 bg-contain cursor-pointer"
@@ -32,7 +37,7 @@ const  LayoutDashboardPage = () => {
             alt="Logo"
           />
           {/* button */}
-          <div className="mx-10 my-12">
+          <div className="mx-10 my-12 cursor-pointer">
             <div className="flex items-center  gap-5 ">
               <div className="font-bold">
                 <HiOutlineDesktopComputer />
@@ -65,9 +70,11 @@ const  LayoutDashboardPage = () => {
             </div>
           </div>
         </div>
+       
+
 
         {/* Right part */}
-        <div className="w-[80%] h-full bg-gray-200 px-10  ">
+        <div className="w-[80%] ml-[20%] h-full bg-gray-200 px-10  ">
             
           {/* navbar  on the top*/}
           <div className="flex justify-between  items-center mt-6">
@@ -106,7 +113,7 @@ const  LayoutDashboardPage = () => {
               </div>
             </div>
           </div>
-          <TestTakerViewDetails2/>
+          <TestTakerMange/>
          
         </div>
       </div>
