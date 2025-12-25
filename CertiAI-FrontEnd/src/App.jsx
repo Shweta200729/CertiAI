@@ -8,14 +8,17 @@ import LayoutDashboardPage from './AdminDashBoard/LayoutDashboardPage'
 import TestTakerLogin from './Authenticate/TestTakerLogin'
 import TestTakerAdd1 from './AdminDashBoard/TestTakers/TestTakerAdd1'
 import TestTakerMange from './AdminDashBoard/TestTakers/TestTakerMange'
+import TestTakerDashboard from './TestTakerDashboard/TestTakerDashboard'
 
 function App() {
  
   return (
     <>
    
-   <LayoutDashboardPage/>
+   {/* <LayoutDashboardPage/> */}
    {/* <TestTakerLogin/> */}
+
+   <TestTakerDashboard/>
    
 
      

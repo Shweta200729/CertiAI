@@ -1,6 +1,5 @@
 import React from 'react'
-import TestTakerProfile from "../assets/TestTakerProfile.png";
-
+import TestTakerProfile from '../assets/TestTakerProfile.png';
 const TestTakerProfileRow = () => {
   return (
    <>
@@ -20,4 +19,4 @@ const TestTakerProfileRow = () => {
   )
 }
 
-export default TestTakerProfileRow
+export default TestTakerProfileRow;
