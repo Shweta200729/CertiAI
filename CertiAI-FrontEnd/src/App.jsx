@@ -9,6 +9,8 @@ import TestTakerLogin from './Authenticate/TestTakerLogin'
 import TestTakerAdd1 from './AdminDashBoard/TestTakers/TestTakerAdd1'
 import TestTakerMange from './AdminDashBoard/TestTakers/TestTakerMange'
 import TestTakerDashboard from './TestTakerDashboard/TestTakerDashboard'
+import PassPage from './TestTakerDashboard/PassPage'
+import TestDashboard from './TestTakerDashboard/TeastTakerDashboardPage/TestDashboard'
 
 function App() {
  
@@ -17,9 +19,9 @@ function App() {
    
    {/* <LayoutDashboardPage/> */}
    {/* <TestTakerLogin/> */}
-
    <TestTakerDashboard/>
    
+
 
      
   

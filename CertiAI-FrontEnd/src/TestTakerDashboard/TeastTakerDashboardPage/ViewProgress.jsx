@@ -4,7 +4,7 @@ const ViewProgress = () => {
   return (
     <>
       <div className="bg-white rounded-md mr-40 pl-6 ml-9 mt-15 pb-5 border-t-2 border-b-2 border-r-4 border-b-gray-300 border-l-2  border-l-gray-300  border-t-gray-300 border-r-gray-300  " >
-        <div className="flex  gap-40  pl-3    items-center">
+        <div className="flex  gap-40  pl-3   items-center">
           {/* Left Circle */}
           <div className=" my-20 ">
             <span className=" shadow-md border-t-2 border-b-2 border-r-4 border-b-[#e32c18]   border-l-[#d22f1d]  border-t-[#ed3520] border-r-[#f12f19]   px-10 text-4xl py-15 rounded-full text-sky-800">

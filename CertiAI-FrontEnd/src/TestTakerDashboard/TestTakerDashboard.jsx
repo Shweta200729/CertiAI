@@ -13,6 +13,8 @@ import TestDashboard from './TeastTakerDashboardPage/TestDashboard';
 import TestTakerPPurchased from './TeastTakerDashboardPage/TestTakerPPurchased';
 import TakeTest from './TeastTakerDashboardPage/TakeTest';
 import ViewProgress from './TeastTakerDashboardPage/ViewProgress';
+import PaymentDetail from './TeastTakerDashboardPage/PaymentDetail';
+import TestTakerProfile from './TeastTakerDashboardPage/TestTakerProfile';
 
 const TestTakerDashboard = () => {
 
@@ -118,7 +120,8 @@ const TestTakerDashboard = () => {
            {/* <TestDashboard/> */}
            {/* <TestTakerPPurchased/> */}
            {/* <TakeTest/> */}
-           <ViewProgress/>
+           {/* <PaymentDetail/> */}
+            <TestTakerProfile/>
         </div>
       
       
