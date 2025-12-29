@@ -11,6 +11,7 @@ import TestTakerMange from './AdminDashBoard/TestTakers/TestTakerMange'
 import TestTakerDashboard from './TestTakerDashboard/TestTakerDashboard'
 import PassPage from './TestTakerDashboard/PassPage'
 import TestDashboard from './TestTakerDashboard/TeastTakerDashboardPage/TestDashboard'
+import InstructorDashboard from './InstructorDashboard/InstructorDashboard'
 
 function App() {
  
@@ -19,7 +20,8 @@ function App() {
    
    {/* <LayoutDashboardPage/> */}
    {/* <TestTakerLogin/> */}
-   <TestTakerDashboard/>
+   {/* <TestTakerDashboard/> */}
+   <InstructorDashboard/>
    
 
 
