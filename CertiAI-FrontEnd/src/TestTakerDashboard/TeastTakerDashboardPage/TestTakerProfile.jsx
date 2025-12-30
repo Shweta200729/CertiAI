@@ -7,7 +7,7 @@ const TestTakerProfile = () => {
       <div className="font-[600] my-2 uppercase text-md">Profile</div>
 
       <div className="flex items-center gap-40 ">
-        <div className="w-full max-w-md my-5 rounded-md bg-[#FFCDCD] p-5">
+        <div className="w-full max-w-md my-5 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300 bg-[#FFCDCD] p-5">
           <p className="mb-4 text-lg font-semibold text-[#54536E] text-md">
             Personal Details
           </p>
@@ -36,7 +36,7 @@ const TestTakerProfile = () => {
           </div>
         </div>
 
-        <div className="bg-[#FFCDCD] px-15 rounded-sm flex flex-col items-center  w-fit">
+        <div className="bg-[#FFCDCD] shadow-md hover:shadow-lg transition-shadow duration-300 px-15 rounded-sm flex flex-col items-center  w-fit">
           <img  className="w-30 py-4 rounded-full" src={Girls} alt="Profile Photo" />
           <div className="flex items-center gap-3 mx-3  bg-white px-2 rounded-sm my-2">
           <p className="text-[#8A8A8A]">Change image</p>
@@ -55,7 +55,7 @@ const TestTakerProfile = () => {
 
         </div>
 
-         <div className="w-full rounded-sm  bg-[#FFCDCD]">
+         <div className="w-full rounded-sm  shadow-md hover:shadow-lg transition-shadow duration-300 bg-[#FFCDCD]">
           <div className="px-3 mx-9 my-8 py-4 rounded-sm bg-white">
           <div className="text-md font-[500]">Registered Date:</div>
           <div className="text-sm  mx-6 font-[400] mt-2">23-04-2026</div>
