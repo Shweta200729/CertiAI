@@ -1,6 +1,6 @@
 import { FiArrowLeft, FiMinus } from "react-icons/fi";
 import TestTakerGirlProfile from "../../assets/TestTakerGirlProfile.png";
-import InstructorGeneral from "./InstructorComponents/InstructorGeneral";
+import InstructorViewDetails2 from "./InstructorViewDetails2";
 
 
 const InstructorViewDetail1 = () => {
@@ -32,7 +32,7 @@ const InstructorViewDetail1 = () => {
           <div>
             <p className="font-[500] text-md text-[#3C3C3C] ">Raj Anadkat</p>
             <p className="text-sm text-[#3C3C3C] font-[400]">
-              Student ID: EU1244324
+              Instructor ID: EU1244324
             </p>
             <p className="text-sm text-[#3C3C3C] font-[400]"> Gender: Female</p>
           </div>
@@ -52,10 +52,11 @@ const InstructorViewDetail1 = () => {
         </div>
 
         {/* After General Clicked */}
-        <InstructorGeneral/>
+        {/* <InstructorGeneral/> */}
 
-        {/* After Purchased Clicked */}
-       {/* <TestTakerProfileGeneralPage/> */}
+      {/* Testes Offered */}
+      <InstructorViewDetails2/>
+
        
       </div>
     </>

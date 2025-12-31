@@ -1,0 +1,12 @@
+import React from 'react'
+
+const About = () => {
+  return (
+    <div className='flex items-center justify-center '>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic molestias veritatis cum quos accusantium corporis nobis maxime sunt magnam culpa repellendus, nihil nisi soluta quibusdam eius ad dicta eum, error vitae cupiditate vero dolorem? Quod voluptates unde doloribus perspiciatis voluptate sit facere eum dolore maxime illum, inventore minima porro explicabo neque repellat fuga quo ad accusamus. Consequuntur, aliquid esse cupiditate perferendis vero maxime repellat reiciendis ipsam quisquam molestiae voluptatibus velit omnis. Delectus, corrupti quod perferendis labore rerum adipisci officiis consequuntur repellendus nam quaerat tempora doloremque, natus soluta maiores nisi exercitationem eligendi asperiores doloribus eveniet magnam? Ratione et saepe voluptate totam corrupti aperiam sed accusamus eligendi sequi, deleniti fuga dolores. Repellendus, impedit, sit laborum porro necessitatibus ipsum dignissimos repudiandae provident, quasi architecto aliquam! Ad voluptatibus aut accusamus necessitatibus! Iste sunt, dolorem repudiandae in ad quaerat perferendis voluptate culpa eaque earum obcaecati impedit, ex et est! Voluptates esse provident incidunt id dolor quam dolorem eveniet illum. Dolorem, aut similique dolor repudiandae fuga sint itaque nisi amet ex fugiat adipisci harum assumenda eligendi debitis. Possimus sunt maiores corporis doloremque similique velit ratione itaque voluptate deserunt omnis quas obcaecati deleniti blanditiis, quidem ut nisi laborum exercitationem labore dolores. Neque corporis quo quae in, dolore maxime temporibus ullam mollitia sequi praesentium magnam consectetur saepe tempore ipsa? Non distinctio, expedita quod ipsum deleniti praesentium asperiores perferendis error. Aperiam porro placeat accusamus, quasi maiores minus modi esse assumenda consequuntur architecto alias in fugiat nisi officia provident quos pariatur, facere possimus necessitatibus? Velit cupiditate possimus tempora iusto itaque illo in molestiae ipsum ad? Debitis atque nam aut quaerat nesciunt rem vero voluptate officiis veniam eaque nobis libero maxime ut facilis, sed optio ipsum tempora harum? Officiis explicabo iste ad optio possimus magnam, repellat consequuntur. Tenetur nam alias dolore eaque, sunt animi corporis consequatur incidunt qui laborum, dolores minus.
+
+    </div>
+  )
+}
+
+export default About

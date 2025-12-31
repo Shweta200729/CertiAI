@@ -1,0 +1,9 @@
+import React from 'react'
+
+const Contact = () => {
+  return (
+    <div>Contact Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illum non consectetur voluptate maxime, natus accusamus, recusandae impedit error ea temporibus placeat possimus. Amet repellat dignissimos, totam beatae inventore adipisci optio quidem corrupti ab, quaerat blanditiis tempore rem enim, cupiditate sit nostrum eius magnam ipsam perferendis. Praesentium recusandae harum, dignissimos, beatae ut pariatur fuga nihil accusamus repellendus aperiam rem aliquam! Inventore, quisquam est ipsum, assumenda repellendus nulla earum nihil sit delectus expedita nobis, hic iste quaerat exercitationem? Ex fuga amet, nihil non sint eveniet excepturi. Esse nulla iste necessitatibus? Debitis placeat voluptatum officiis non hic labore laborum asperiores enim exercitationem ut, saepe ad! Repellendus sit sed sunt commodi maxime obcaecati, quibusdam corporis quisquam, eveniet at veritatis dolorem ea saepe voluptatibus eligendi laborum. Aliquid incidunt obcaecati aperiam quam ipsum consequuntur? A, possimus earum? Dolorum, nesciunt. Laboriosam tempore quos quo, aut cum a aliquam et omnis sed atque cupiditate molestias, possimus ut consequatur. Beatae id consequatur delectus distinctio asperiores ea architecto repellendus a ab, dolor iusto obcaecati expedita accusamus modi deleniti quod. Autem eius iure illo veritatis facere exercitationem. Ullam harum, dolores delectus at quasi architecto repellat ut molestiae cupiditate unde eos vero labore consequatur tempora maiores beatae quis mollitia repellendus iusto?</div>
+  )
+}
+
+export default Contact

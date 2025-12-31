@@ -8,6 +8,8 @@ import { GiTeacher } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import Dashboard from './InstructorDashboardPage/Dashboard';
 import InsProfile from './InstructorDashboardPage/InsProfile';
+import YourPayments  from './InstructorDashboardPage/YourPayments';
+import ManageTests from './InstructorDashboardPage/ManageTests';
 
 const InstructorDashboard = () => {
 
@@ -104,7 +106,9 @@ const InstructorDashboard = () => {
             </div>
           </div>
          {/* <Dashboard/> */}
-         <InsProfile/>
+         {/* <InsProfile/> */}
+         {/* <YourPayments/> */}
+         <ManageTests/>
         </div>
       
       
@@ -114,7 +118,7 @@ const InstructorDashboard = () => {
   )
 }
 
-export default InstructorDashboard
+export default InstructorDashboard;
 
 
 

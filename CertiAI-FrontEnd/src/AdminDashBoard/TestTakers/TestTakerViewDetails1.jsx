@@ -52,8 +52,9 @@ const TestTakerViewDetails1 = () => {
         </div>
 
         {/* After Purchased Clicked */}
-       {/* <TestTakerProfileGeneralPage/> */}
-       <TestTakerViewDetails2/>
+
+       <TestTakerProfileGeneralPage/>
+       {/* <TestTakerViewDetails2/> */}
       </div>
     </>
   );
