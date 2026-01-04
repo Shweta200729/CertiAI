@@ -6,7 +6,6 @@ import { PiStudentBold, PiBooksBold } from "react-icons/pi";
 import { GiTeacher } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { FiBell, FiMessageSquare, FiSearch } from "react-icons/fi";
-import { Links, NavLink, useNavigate } from "react-router-dom";
 
 import Dashboard from "./Dashboard";
 import TestTakerMange from "./TestTakers/TestTakerMange";
@@ -28,14 +27,14 @@ import InstructorRemove2 from "./Instructors/InstructorRemove2";
 import {
   createBrowserRouter,
   createRoutesFromChildren,
-  Link,
+  NavLink,
   Route,
 } from "react-router-dom";
 
 const LayoutDashboardPage = () => {
   const [dashboard, setDashboard] = useState();
 
-  const Navigate = useNavigate();
+  
   // const router=createBrowserRouter(
   //  createRoutesFromElements(
   //   <Route path="/" element={<Dashboard />}>
@@ -49,13 +48,13 @@ const LayoutDashboardPage = () => {
       <div className="flex bg-gray-100">
         {/* left part */}
 
-        <div className="w-[20%] c fixed  bg-white h-svh">
+        <div className="w-[20%] fixed  bg-white h-svh">
           {/* image logo */}
           <img
             className="w-[200px] bg-center mt-6 bg-contain cursor-pointer"
             src={logo}
             alt="Logo"
-            onClick={() => Navigate("/")}
+            
           />
           {/* button */}
           <div className="mx-10 my-12 cursor-pointer">
@@ -64,47 +63,44 @@ const LayoutDashboardPage = () => {
                 <HiOutlineDesktopComputer />
               </div>
 
-              <NavLink to="/Dashboard">
+             
                 <button className="font-[600] cursor-pointer">Dashboard</button>
-              </NavLink>
+        
             </div>
-            <NavLink to="/TestTaker">
+            <NavLink to="TestTakerManage" >
               <div className="flex items-center mt-4 gap-5 ">
                 <div>
                   <PiStudentBold />
                 </div>
-                <button
-                  className="font-[400] cursor-pointer hover:border hover:border-pink-400 hover:Rounded-md  hover:bg-pink-200 "
-                  onClick={useNavigate("/TestakerManager")}
-                >
+                <button className="font-[400]  cursor-pointer  hover:font-[500] transition-all duration-300">
                   TestTakers
                 </button>
               </div>
             </NavLink>
-            <Link to="/Instructor">
+            <NavLink to="Instructor">
               <div className="flex items-center mt-1 gap-5 ">
                 <div>
                   <GiTeacher />
                 </div>
                 <button>Instructor</button>
               </div>
-            </Link>
-            <Link to="/TestEnvironment">
+            </NavLink>
+            <NavLink to="TestEnvironment">
               <div className="flex items-center mt-1  gap-5 ">
                 <div>
                   <PiBooksBold />
                 </div>
                 <button>Test Environment</button>
               </div>
-            </Link>
-            <Link to="/Payment">
+            </NavLink>
+            <NavLink to="Payments">
               <div className="flex items-center mt-1  gap-5 ">
                 <div>
                   <RiSecurePaymentLine />
                 </div>
                 <button>Payments</button>
               </div>
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -112,7 +108,7 @@ const LayoutDashboardPage = () => {
       {/* Right part */}
       <div className="w-[80%] ml-[20%] h-full bg-gray-200 px-10  ">
         {/* navbar  on the top*/}
-        <div className="flex justify-between  items-center mt-6">
+        <div className="flex justify-between   items-center pt-3">
           <div className="flex justify-center items-center w-min border border-gray-200 shadow-white ">
             <div className="flex items-center bg-white w-[650px] rounded px-2 shadow-sm">
               <span>
@@ -148,8 +144,6 @@ const LayoutDashboardPage = () => {
             </div>
           </div>
         </div>
-        {/* <InstructorRemove2/> */}
-        <Dashboard />
       </div>
     </>
   );

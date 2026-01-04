@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const TestTakerAdd1 = () => {
  const[name,setName]=useState('')
  const[email,setEmail]=useState('')
@@ -13,9 +13,12 @@ const TestTakerAdd1 = () => {
   setpassword('')
 
  };
-
+ 
+const navigate=useNavigate('')
 
   return (
+   
+ 
     <div className=" min-h-screen flex items-center justify-center">
       <form  onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-90">
         <h2 className="text-xl font-[400] mb-4 text-center">Add TestTaker</h2>
@@ -52,15 +55,19 @@ const TestTakerAdd1 = () => {
           onChange={(e)=>{setpassword(e.target.value)}}
           className="w-full text-sm font-[400] text-[#C5C5C5] p-2 hover:outline-none outline-none border border-gray-300 rounded-sm"
         />
-
+          
         <button
           type="submit"
           className="w-full bg-[#CF4D41] text-white py-2 my-5 rounded hover:bg-[#CF4D41] transition"
+          onClick={()=>navigate('../TestTakerAdd-2')}
+          
         >
           Add
         </button>
+       
       </form>
     </div>
+   
   );
 };
 

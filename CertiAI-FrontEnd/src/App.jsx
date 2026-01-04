@@ -1,68 +1,73 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './Components/Navbar'
-
-import LayoutDashboardPage from './AdminDashBoard/LayoutDashboardPage'
-import TestTakerLogin from './Authenticate/TestTakerLogin'
-import TestTakerAdd1 from './AdminDashBoard/TestTakers/TestTakerAdd1'
-import TestTakerMange from './AdminDashBoard/TestTakers/TestTakerMange'
-import TestTakerDashboard from './TestTakerDashboard/TestTakerDashboard'
-import PassPage from './TestTakerDashboard/PassPage'
-import TestDashboard from './TestTakerDashboard/TeastTakerDashboardPage/TestDashboard'
-import InstructorDashboard from './InstructorDashboard/InstructorDashboard'
-import Dashboard from './AdminDashBoard/Dashboard'
-import { createBrowserRouter, createRoutesFromElements, Link, Route, RouterProvider } from 'react-router-dom'
-import RootLayout from './Layout/RootLayout'
-import Home from './PagesStating/Home'
-import Contact from './PagesStating/Contact'
-import About from './PagesStating/About'
-import Adminlayuot from './Layout/Adminlayuot'
-import PaymentDetail from './TestTakerDashboard/TeastTakerDashboardPage/PaymentDetail'
+import TestTakerAdd1 from "./AdminDashBoard/TestTakers/TestTakerAdd1";
+import TestTakerMange from "./AdminDashBoard/TestTakers/TestTakerMange";
+import Dashboard from "./AdminDashBoard/Dashboard";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import RootLayout from "./Layout/RootLayout";
+import Home from "./PagesStating/Home";
+import Contact from "./PagesStating/Contact";
+import About from "./PagesStating/About";
+import AdminLayout from "./Layout/AdminLayout";
+import InstructorManage from "./AdminDashBoard/Instructors/InstructorManage";
+import TestEnvironments from "./AdminDashBoard/Test Environment/TestEnvironments";
+import PaymentsDetailPage from "./AdminDashBoard/Payments/PaymentsDetailPage";
+import TestTakerManageLayout from "./Layout/TestTakerManageLayout";
+import TestTakerAdd2 from "./AdminDashBoard/TestTakers/TestTakerAdd2";
+import TestTakerViewDetails1 from "./AdminDashBoard/TestTakers/TestTakerViewDetails1";
+import TestTakerViewDetails2 from "./AdminDashBoard/TestTakers/TestTakerViewDetails2";
+import TestTakerRemove1 from "./AdminDashBoard/TestTakers/TestTakerRemove1";
+import TestTakerRemove2 from "./AdminDashBoard/TestTakers/TestTakerRemove2";
 
 function App() {
-
   const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      {/* USER ROUTES */}
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-      </Route>
+    createRoutesFromElements(
+      <>
+        {/* USER ROUTES */}
+        <Route path="/" element={<RootLayout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
 
-      {/* ADMIN ROUTES */}
-      <Route path="/admin" element={<Adminlayuot />}>
-    <Route path='dashboard' element={<Dashboard/>}></Route>
-      <Route path='Testtaker' element={<TestTakerMange/>}></Route>  
-      
-      
-        
-      </Route>
-    </>
-  )
-);
+        {/* ADMIN ROUTES */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
 
- 
- 
+          <Route path="TestTakerManage" element={<TestTakerManageLayout />}>
+            <Route index element={<TestTakerMange />} />
+            <Route path="TestTakerAdd-1" element={<TestTakerAdd1 />} />
+            <Route path="TestTakerAdd-2" element={<TestTakerAdd2 />} />
+            <Route path="ProfilePage" element={<TestTakerViewDetails1/>}/>
+            <Route path="RemoveTestTaker" element={<TestTakerRemove1/>}/>
+            <Route path="Remove" element={<TestTakerRemove2/>}/>
+
+            
+          </Route>
+
+          <Route path="Instructor" element={<InstructorManage />} />
+
+          <Route path="Payments" element={<PaymentsDetailPage />} />
+
+          <Route path="TestEnvironment" element={<TestEnvironments />} />
+        </Route>
+      </>
+    )
+  );
+
   return (
     <>
-    <RouterProvider router={router}/>
-   
+      <RouterProvider router={router} />
 
-   {/* <LayoutDashboardPage/> */}
-   {/* <TestTakerLogin/> */}
-   {/* <TestTakerDashboard/> */}
-   {/* <InstructorDashboard/> */}
-   
-
-
-     
-  
+      {/* <LayoutDashboardPage/> */}
+      {/* <TestTakerLogin/> */}
+      {/* <TestTakerDashboard/> */}
+      {/* <InstructorDashboard/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

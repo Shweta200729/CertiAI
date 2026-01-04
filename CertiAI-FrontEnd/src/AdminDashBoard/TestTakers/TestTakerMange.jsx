@@ -1,16 +1,25 @@
 import React from "react";
 import TestTakerCard from "../../Components/TestTakerCard";
 
+import { useNavigate } from "react-router-dom";
+
 const TestTakerMange = () => {
+ 
+  const  navigate=useNavigate()
+
   return (
     <>
-      <div>
+    
+      <div >
         {/* Title and Button  */}
-        <div className="flex justify-between mt-10">
+        <div className="flex justify-between mt-5">
           <p className="text-[#54536E] text-sm font-[600]">TestTakers</p>
-          <button className="bg-[#D14B42] text-white px-3 py-2  rounded-md ">
+           {/* <Link to='TestTakerAdd-1'> */}
+          <button  onClick={() => navigate("TestTakerAdd-1")} className="bg-[#D14B42] text-white px-3 py-2  rounded-md ">
             +Add TestTakers
           </button>
+          
+          
         </div>
         {/* box  */}
         <div className="flex gap-10 my-5">
@@ -51,6 +60,7 @@ const TestTakerMange = () => {
         {/* Test Card */}
         <TestTakerCard/>
       </div>
+     
     </>
   );
 };
