@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiCalendar } from "react-icons/fi";
 import Credit from "./ReportCreditDebitComponents.jsx/Credit";
 import Debit from "./ReportCreditDebitComponents.jsx/Debit";
+import { useNavigate } from "react-router-dom";
+import Report from "./ReportCreditDebitComponents.jsx/Report";
 const PaymentsDetailPage = () => {
+  const navigate=useNavigate()
+  const [activateSection,setAvtivateSection]=useState()
   return (
     <>
     {/* Report credit debit */}
       <div className="space-x-8">
-        <span className="hover:text-[#CF4D40] px-2 hover:border-b-2 hover:border-b-amber-700 cursor-pointer py-2">
+        <span onClick={()=>{
+          navigate('ReportPage');
+          setAvtivateSection('ReportPage');
+          }}
+           className="hover:text-[#CF4D40] px-2 hover:border-b-2 hover:border-b-amber-700 cursor-pointer py-2">
           Report
         </span>
-        <span className="hover:text-[#CF4D40] px-2 hover:border-b-2 hover:border-b-amber-700 cursor-pointer py-2">
+        <span onClick={()=>{
+          navigate('creaditPage');
+          setAvtivateSection('creaditPage')
+          }} className="hover:text-[#CF4D40] px-2 hover:border-b-2 hover:border-b-amber-700 cursor-pointer py-2">
           Credit
         </span>
-        <span className="hover:text-[#CF4D40] px-2 hover:border-b-2 hover:border-b-amber-700 cursor-pointer py-2">
+        <span onClick={()=>{
+          navigate('debitpage');
+          setAvtivateSection('debitpage')
+        }}
+         className="hover:text-[#CF4D40] px-2 hover:border-b-2 hover:border-b-amber-700 cursor-pointer py-2">
           Debit
         </span>
         <hr className="border border-gray-300 my-2" />
@@ -39,6 +54,10 @@ const PaymentsDetailPage = () => {
 
    {/* credit */}
       {/* <Credit/> */}
+
+      {activateSection==='debitpage'&&<Debit/>}
+       {activateSection==='creaditPage'&&<Credit/>}
+        {activateSection==='ReportPage'&&<Report/>}
 
 <Debit/>
 

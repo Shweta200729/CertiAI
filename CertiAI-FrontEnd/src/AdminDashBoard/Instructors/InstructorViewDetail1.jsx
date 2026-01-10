@@ -1,9 +1,15 @@
 import { FiArrowLeft, FiMinus } from "react-icons/fi";
 import TestTakerGirlProfile from "../../assets/TestTakerGirlProfile.png";
 import InstructorViewDetails2 from "./InstructorViewDetails2";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import InstructorGeneral from "./InstructorComponents/InstructorGeneral";
+import InstrucrorOffers from "./InstructorComponents/InstrucrorOffers";
 
 
 const InstructorViewDetail1 = () => {
+  const[activates,setActive]=useState('general')
+  const navigate=useNavigate()
   return (
     <>
       <div className="min-h-screen">
@@ -16,7 +22,7 @@ const InstructorViewDetail1 = () => {
             </p>
           </div>
           <div className="flex flex-row-reverse ">
-            <button className="px-4 mt-6 py-2 bg-[#CF4D41] font-[500] text-white rounded hover:bg-[#b84338] flex gap-1 items-center ">
+            <button onClick={()=>navigate('../RemoveInstructor1')} className="px-4 mt-6 py-2 bg-[#CF4D41] font-[500] text-white rounded hover:bg-[#b84338] flex gap-1 items-center ">
               <FiMinus /> Remove
             </button>
           </div>
@@ -41,10 +47,10 @@ const InstructorViewDetail1 = () => {
         {/* General Test Purchased  */}
         <div className="mt-10">
           <div className="flex gap-15 ">
-            <p className="text-sm pb-3 font-[500] text-[#707070] hover:border-b-2  hover:border-b-[#CF4C42] hover:text-[#CF4C42] focus:border-b-[#CF4C42] focus:text-[#CF4C42]">
+            <p onClick={()=>setActive("general")} className="text-sm pb-3 font-[500] text-[#707070] hover:border-b-2  hover:border-b-[#CF4C42] hover:text-[#CF4C42] focus:border-b-[#CF4C42] focus:text-[#CF4C42] cursor-pointer">
               General
             </p>
-            <p className="text-sm  pb-3 font-[500] text-[#707070] hover:border-b-2 px-2 hover:border-b-[#CF4C42] hover:text-[#CF4C42] focus:border-b-[#CF4C42] focus:text-[#CF4C42]">
+            <p onClick={()=>setActive("testspurchased")}  className="text-sm  pb-3 font-[500] text-[#707070] hover:border-b-2 px-2 hover:border-b-[#CF4C42] hover:text-[#CF4C42] focus:border-b-[#CF4C42] focus:text-[#CF4C42] cursor-pointer">
               Tests Purchased
             </p>
           </div>
@@ -52,10 +58,9 @@ const InstructorViewDetail1 = () => {
         </div>
 
         {/* After General Clicked */}
-        {/* <InstructorGeneral/> */}
-
-      {/* Testes Offered */}
-      <InstructorViewDetails2/>
+        
+      {activates==='general'&& <InstructorGeneral/>}
+     {activates==='testspurchased'&& <InstructorViewDetails2/>}
 
        
       </div>

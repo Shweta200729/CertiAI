@@ -21,6 +21,14 @@ import TestTakerViewDetails1 from "./AdminDashBoard/TestTakers/TestTakerViewDeta
 import TestTakerViewDetails2 from "./AdminDashBoard/TestTakers/TestTakerViewDetails2";
 import TestTakerRemove1 from "./AdminDashBoard/TestTakers/TestTakerRemove1";
 import TestTakerRemove2 from "./AdminDashBoard/TestTakers/TestTakerRemove2";
+import InstructorLayout from "./Layout/InstructorLayout";
+import InstructorAdd1 from "./AdminDashBoard/Instructors/InstructorAdd1";
+import InstructorAdd2 from "./AdminDashBoard/Instructors/InstructorAdd2";
+import InstructorViewDetail1 from "./AdminDashBoard/Instructors/InstructorViewDetail1";
+import PaymentsLayout from "./Layout/paymentsLayout";
+import Credit from "./AdminDashBoard/Payments/ReportCreditDebitComponents.jsx/Credit";
+import Debit from "./AdminDashBoard/Payments/ReportCreditDebitComponents.jsx/Debit";
+import Report from "./AdminDashBoard/Payments/ReportCreditDebitComponents.jsx/Report";
 
 function App() {
   const router = createBrowserRouter(
@@ -44,17 +52,30 @@ function App() {
             <Route path="ProfilePage" element={<TestTakerViewDetails1/>}/>
             <Route path="RemoveTestTaker" element={<TestTakerRemove1/>}/>
             <Route path="Remove" element={<TestTakerRemove2/>}/>
-
-            
           </Route>
 
-          <Route path="Instructor" element={<InstructorManage />} />
+          <Route path="Instructor" element={<InstructorLayout />} >
+           <Route index element={<InstructorManage />} />
+            <Route path="InstructAdd-1" element={<InstructorAdd1 />} />
+            <Route path="InstructAdd-2" element={<InstructorAdd2 />} />
+            <Route path="InstructorProfilepage" element={<InstructorViewDetail1/>}/>
+            <Route path="RemoveInstructor1" element={<TestTakerRemove1/>}/>
+            <Route path="RemoveInstrctor2" element={<TestTakerRemove2/>}/>
+            </Route>
 
-          <Route path="Payments" element={<PaymentsDetailPage />} />
+
 
           <Route path="TestEnvironment" element={<TestEnvironments />} />
+          
+          <Route path="Payments" element={<PaymentsLayout/>} > 
+          <Route index element={<PaymentsDetailPage/>}/>
+           <Route  path='ReportPage' element={<Report/>}/>
+          <Route  path='creaditPage' element={<Credit/>}/>
+            <Route  path='debitpage' element={<Debit/>}/>
+          
+          </Route>
         </Route>
-      </>
+</>
     )
   );
 

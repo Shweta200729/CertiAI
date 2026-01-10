@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const InstructorAdd1 = () => {
     
@@ -14,6 +15,7 @@ const InstructorAdd1 = () => {
       setpassword('')
     
      };
+     const navigate=useNavigate()
     
   return (
     <>
@@ -57,6 +59,7 @@ const InstructorAdd1 = () => {
             <button
               type="submit"
               className="w-full bg-[#CF4D41] text-white py-2 my-5 rounded hover:bg-[#CF4D41] transition"
+              onClick={()=>navigate('../InstructAdd-2')}
             >
               Add
             </button>

@@ -1,15 +1,17 @@
 import React from 'react'
 import TestTakerCard from "../../Components/TestTakerCard";
 import InstructorsCard from '../../Components/InstructorsCard';
+import { useNavigate } from 'react-router-dom';
 
 const InstructorManage = () => {
+  const navigate=useNavigate()
   return (
     <>
      <div>
         {/* Title and Button  */}
         <div className="flex justify-between mt-10">
           <p className="text-[#54536E] text-sm font-[600]">Instructors</p>
-          <button className="bg-[#D14B42] text-white px-3 py-2  rounded-md ">
+          <button onClick={()=>navigate('InstructAdd-1')} className="bg-[#D14B42] text-white px-3 py-2  rounded-md ">
             +Add Instructor
           </button>
         </div>
