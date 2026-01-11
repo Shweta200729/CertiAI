@@ -10,6 +10,7 @@ import Dashboard from './InstructorDashboardPage/Dashboard';
 import InsProfile from './InstructorDashboardPage/InsProfile';
 import YourPayments  from './InstructorDashboardPage/YourPayments';
 import ManageTests from './InstructorDashboardPage/ManageTests';
+import { Link } from 'react-router-dom';
 
 const InstructorDashboard = () => {
 
@@ -39,26 +40,26 @@ const InstructorDashboard = () => {
                   <div>
                     <PiStudentBold />
                   </div>
-                  <button className="font-[400]">Upload Tests</button>
+                  <Link to='Dashboard'><button className="font-[400]">Upload Tests</button></Link>
                 </div>
                 <div className="flex items-center mt-1 gap-5 ">
                   <div>
                     <GiTeacher />
                   </div>
-                  <button>Manage Tests</button>
+                  <Link to='ManageTests'><button>Manage Tests</button></Link>
                 </div>
                 <div className="flex items-center mt-1  gap-5 ">
                   <div>
                     <PiBooksBold />
                   </div>
-                  <button>Your Payments</button>
+                 <Link to='yourPayment'> <button>Your Payments</button></Link>
                 </div>
 
                 <div className="flex items-center mt-1  gap-5 ">
                   <div>
                     <RiSecurePaymentLine />
                   </div>
-                  <button>Instructor Profile</button>
+                  <Link to='insprofile'><button>Instructor Profile</button></Link>
                 </div>
 
 
@@ -108,7 +109,7 @@ const InstructorDashboard = () => {
          {/* <Dashboard/> */}
          {/* <InsProfile/> */}
          {/* <YourPayments/> */}
-         <ManageTests/>
+         {/* <ManageTests/> */}
         </div>
       
       

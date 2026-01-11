@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ViewProgress = () => {
+  const navigate=useNavigate()
   return (
     <>
       <div className="bg-white rounded-md mr-40 pl-6 ml-9 mt-15 pb-5 border-t-2 border-b-2 border-r-4 border-b-gray-300 border-l-2  border-l-gray-300  border-t-gray-300 border-r-gray-300  " >
@@ -37,7 +39,7 @@ const ViewProgress = () => {
 
         {/* Buttons */}
        <div className="mt-20 flex justify-end space-x-5">
-  <button className="px-3 shadow-sm py-2 rounded-md font-[500] border border-gray-400 bg-white text-black">
+  <button onClick={()=>navigate('../ViewprogressQuestion')} className="px-3 shadow-sm py-2 rounded-md font-[500] border border-gray-400 bg-white text-black">
     View Answers
   </button>
   <button className="px-6 shadow-sm font-[500] py-2 rounded-md border border-gray-400 bg-white text-black">
