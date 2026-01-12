@@ -5,14 +5,13 @@ import TestTakerDashboard from "../TestTakerDashboard/TestTakerDashboard";
 
 const TestsLayout = () => {
   return (
-    <div className="flex min-h-screen">
+    <div >
       {/* Left Dashboard Sidebar */}
       
         <TestTakerDashboard />
-      
-
+    
       {/* Right Content Area */}
-      <div className="flex-1 bg-gray-200 px-5 py-3">
+      <div className=" bg-gray-200 px-5 ml-[20%]  " >
         <Outlet />
       </div>
     </div>

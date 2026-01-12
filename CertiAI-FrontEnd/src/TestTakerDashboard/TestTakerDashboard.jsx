@@ -9,15 +9,17 @@ import { GiTeacher } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { RiPagesLine } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
+import Dashboard from "../InstructorDashboard/InstructorDashboardPage/Dashboard";
 
 const TestTakerDashboard = () => {
   const [dashboard, setDashboard] = useState();
+  
 
   return (
     <>
       <div className="flex gap-90 bg-gray-100 ">
         {/* left side */}
-        <div className="w-[20%]  fixed  bg-white h-svh">
+        <div className="w-[20%]  fixed   bg-white h-svh">
           {/* image logo */}
           <img
             className="w-[200px] bg-center mt-6 bg-contain cursor-pointer"
@@ -30,7 +32,7 @@ const TestTakerDashboard = () => {
               <div className="font-bold">
                 <HiOutlineDesktopComputer />
               </div>
-              <button className="font-[600]">Dashboard</button>
+              <button  className="font-[600]">Dashboard</button>
             </div>
             <div className="flex items-center mt-4 gap-5 ">
               <div>
@@ -38,7 +40,7 @@ const TestTakerDashboard = () => {
               </div>
               <Link to="TestPurchased">
                 {" "}
-                <button className="font-[400]">Test Purchased</button>
+                <button  className="font-[400]">Test Purchased</button>
               </Link>
             </div>
             <div className="flex items-center mt-1 gap-5 ">
@@ -72,9 +74,9 @@ const TestTakerDashboard = () => {
 
         {/* right side       */}
         {/* right side */}
-<div className="mr-[50%]  min-h-screen bg-gray-200 px-6">
+<div className="min-h-screen w-full bg-gray-200 ml-[20%]">
   {/* navbar on the top */}
-  <div className="flex justify-between items-center py-4">
+  <div className="flex justify-between items-center mx-6 py-4">
     {/* Search Box */}
     <div className="flex items-center bg-white w-full max-w-lg rounded px-3 shadow">
       <FiSearch className="mr-2 text-gray-400" />
@@ -104,6 +106,7 @@ const TestTakerDashboard = () => {
           <div className="text-sm text-gray-500">Admin</div>
         </div>
       </div>
+    
     </div>
   </div>
 </div>

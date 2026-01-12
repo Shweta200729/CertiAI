@@ -31,7 +31,6 @@ import Credit from "./AdminDashBoard/Payments/ReportCreditDebitComponents.jsx/Cr
 import Debit from "./AdminDashBoard/Payments/ReportCreditDebitComponents.jsx/Debit";
 import Report from "./AdminDashBoard/Payments/ReportCreditDebitComponents.jsx/Report";
 import TestsLayout from "./Layout/TestsLayout";
-import TestTakerPPurchased from "./TestTakerDashboard/TeastTakerDashboardPage/TestTakerPPurchased";
 import TestDashboard from "./TestTakerDashboard/TeastTakerDashboardPage/TestDashboard";
 import TakeTest from "./TestTakerDashboard/TeastTakerDashboardPage/TakeTest";
 import ViewProgress from "./TestTakerDashboard/TeastTakerDashboardPage/ViewProgress";
@@ -43,7 +42,7 @@ import InsProfile from "./InstructorDashboard/InstructorDashboardPage/InsProfile
 import ManageTests from "./InstructorDashboard/InstructorDashboardPage/ManageTests";
 import YourPayments from "./InstructorDashboard/InstructorDashboardPage/YourPayments";
 import InstructorDashboardLayout from "./Layout/InstructorDashboardLayout";
-
+import TestTakerPPurchased from "./TestTakerDashboard/TeastTakerDashboardPage/TestTakerPPurchased"
 
 function App() {
   const router = createBrowserRouter(
@@ -55,8 +54,8 @@ function App() {
           <Route path="about" element={<About />} />
 
           <Route path="/Tests" element={<TestsLayout />}>
-            <Route element={<TestDashboard />} />
-            <Route path="TestPurchased" element={<TestTakerPPurchased />} />
+            <Route  element={<TestDashboard />} />
+             <Route path="Take" element={<TestTakerPPurchased />} />
             <Route path="TakeTest" element={<TakeTest />} />
             <Route path="ViewProgress" element={<ViewProgress />} />
             <Route
@@ -90,7 +89,8 @@ function App() {
             <Route
               path="InstructorProfilepage"
               element={<InstructorViewDetail1 />}
-            />
+            />{" "}
+            <Route index element={<TestDashboard />} />
             <Route path="RemoveInstructor1" element={<TestTakerRemove1 />} />
             <Route path="RemoveInstrctor2" element={<TestTakerRemove2 />} />
           </Route>
@@ -104,14 +104,12 @@ function App() {
             <Route path="debitpage" element={<Debit />} />
           </Route>
         </Route>
-         <Route path="/InstructorPage" element={<InstructorDashboardLayout/>}>
-         <Route path="Dashboard" element={<InstructorDashboard />} />
-         <Route path="insprofile" element={<InsProfile />} />
-         <Route path="ManageTests" element={<ManageTests />} />
-         <Route path="yourPayment" element={<YourPayments />} />
-                  
-         </Route>
-
+        <Route path="/InstructorPage" element={<InstructorDashboardLayout />}>
+          <Route path="Dashboard" element={<InstructorDashboard />} />
+          <Route path="insprofile" element={<InsProfile />} />
+          <Route path="ManageTests" element={<ManageTests />} />
+          <Route path="yourPayment" element={<YourPayments />} />
+        </Route>
       </>
     )
   );
