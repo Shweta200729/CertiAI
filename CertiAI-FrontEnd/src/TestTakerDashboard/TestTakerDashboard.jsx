@@ -11,15 +11,9 @@ import { RiPagesLine } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import Dashboard from "../InstructorDashboard/InstructorDashboardPage/Dashboard";
 import TestTakerPPurchased from "./TeastTakerDashboardPage/TestTakerPPurchased";
-import TestTakerMange from "../AdminDashBoard/TestTakers/TestTakerMange";
-import TakeTest from "./TeastTakerDashboardPage/TakeTest";
-import ViewProgress from "./TeastTakerDashboardPage/ViewProgress";
-import PaymentDetail from "./TeastTakerDashboardPage/PaymentDetail";
-import TestTakerProfile from "./TeastTakerDashboardPage/TestTakerProfile";
 
 const TestTakerDashboard = () => {
   const [dashboard, setDashboard] = useState();
-  const [active, setActivate] = useState('Dashboard');
 
   return (
     <>
@@ -38,52 +32,52 @@ const TestTakerDashboard = () => {
               <div className="font-bold">
                 <HiOutlineDesktopComputer />
               </div>
-              <button onClick={()=>setActivate('Dashboard')} className="font-[600]">Dashboard</button>
+              <button className="font-[600]">Dashboard</button>
             </div>
             <div className="flex items-center mt-4 gap-5 ">
               <div>
                 <PiStudentBold />
               </div>
-              
+              <Link to="TestPurchased">
                 {" "}
-                <button onClick={()=>setActivate('purchased')} className="font-[400]">Test Purchased</button>
-             
+                <button className="font-[400]">Test Purchased</button>
+              </Link>
             </div>
             <div className="flex items-center mt-1 gap-5 ">
               <div>
                 <GiTeacher />
               </div>
-              {/* <Link to="TakeTest"> */}
+              <Link to="TakeTest">
                 {" "}
-                <button onClick={()=>setActivate('TakeTest')} >Take Tests</button>
-              {/* </Link> */}
+                <button>Take Tests</button>
+              </Link>
             </div>
             <div className="flex items-center mt-1  gap-5 ">
               <div>
                 <PiBooksBold />
               </div>
-              
+              <Link to="ViewProgress">
                 {" "}
-                <button onClick={()=>setActivate('Progress')}>View Progress</button>
-             
+                <button>View Progress</button>
+              </Link>
             </div>
 
             <div className="flex items-center mt-1  gap-5 ">
               <div>
                 <RiSecurePaymentLine />
               </div>
-             
-                <button onClick={()=>setActivate('Payment')}>Payments</button>
-              
+              <NavLink to="Payments">
+                <button>Payments</button>
+              </NavLink>
             </div>
 
             <div className="flex items-center mt-1  gap-5 ">
               <div>
                 <RiPagesLine />
               </div>
-             
-                <button onClick={()=>setActivate('TakeTestprofile')}>Test Taker Profile</button>
-              
+              <Link to="TestTakerProfile">
+                <button>Test Taker Profile</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -124,13 +118,6 @@ const TestTakerDashboard = () => {
               </div>
             </div>
           </div>
-          <div className="mx-6">
-          {active=="TakeTest"&&<TakeTest/>}
-           {active=="Progress"&&<ViewProgress/>}
-           {active=="Payment"&&<PaymentDetail/>}
-           {active=="TakeTestprofile"&&<TestTakerProfile/>}
-           {active=="Dashboard"&&<Dashboard/>}
-           </div>
           {/* <TestTakerPPurchased/> */}
         </div>
       </div>

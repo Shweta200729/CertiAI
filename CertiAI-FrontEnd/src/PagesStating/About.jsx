@@ -1,12 +1,57 @@
-import React from 'react'
+import Hero from '../assets/Hero.png'
 
 const About = () => {
   return (
-    <div className='flex items-center justify-center '>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic molestias veritatis cum quos accusantium corporis nobis maxime sunt magnam culpa repellendus, nihil nisi soluta quibusdam eius ad dicta eum, error vitae cupiditate vero dolorem? Quod voluptates unde doloribus perspiciatis voluptate sit facere eum dolore maxime illum, inventore minima porro explicabo neque repellat fuga quo ad accusamus. Consequuntur, aliquid esse cupiditate perferendis vero maxime repellat reiciendis ipsam quisquam molestiae voluptatibus velit omnis. Delectus, corrupti quod perferendis labore rerum adipisci officiis consequuntur repellendus nam quaerat tempora doloremque, natus soluta maiores nisi exercitationem eligendi asperiores doloribus eveniet magnam? Ratione et saepe voluptate totam corrupti aperiam sed accusamus eligendi sequi, deleniti fuga dolores. Repellendus, impedit, sit laborum porro necessitatibus ipsum dignissimos repudiandae provident, quasi architecto aliquam! Ad voluptatibus aut accusamus necessitatibus! Iste sunt, dolorem repudiandae in ad quaerat perferendis voluptate culpa eaque earum obcaecati impedit, ex et est! Voluptates esse provident incidunt id dolor quam dolorem eveniet illum. Dolorem, aut similique dolor repudiandae fuga sint itaque nisi amet ex fugiat adipisci harum assumenda eligendi debitis. Possimus sunt maiores corporis doloremque similique velit ratione itaque voluptate deserunt omnis quas obcaecati deleniti blanditiis, quidem ut nisi laborum exercitationem labore dolores. Neque corporis quo quae in, dolore maxime temporibus ullam mollitia sequi praesentium magnam consectetur saepe tempore ipsa? Non distinctio, expedita quod ipsum deleniti praesentium asperiores perferendis error. Aperiam porro placeat accusamus, quasi maiores minus modi esse assumenda consequuntur architecto alias in fugiat nisi officia provident quos pariatur, facere possimus necessitatibus? Velit cupiditate possimus tempora iusto itaque illo in molestiae ipsum ad? Debitis atque nam aut quaerat nesciunt rem vero voluptate officiis veniam eaque nobis libero maxime ut facilis, sed optio ipsum tempora harum? Officiis explicabo iste ad optio possimus magnam, repellat consequuntur. Tenetur nam alias dolore eaque, sunt animi corporis consequatur incidunt qui laborum, dolores minus.
+    <section className="min-h-screen bg-gradient-to-r from-[#fde9ea] to-white flex items-center px-20 font-poppins max-lg:px-6">
+      
+      {/* Left Content */}
+      <div className="flex-1">
+        <h2 className="text-4xl font-bold text-black mb-6 border-b-4 border-black inline-block">
+          About US
+        </h2>
 
-    </div>
-  )
-}
+        <div className=" pb-40 text-sm text-gray-800 leading-relaxed max-w-[560px]">
+          <p className="flex gap-3">
+            <span>🎈</span>
+            <span className='font-[500]'>
+              Welcome to <strong>CertiAI!</strong> We are a pioneering platform
+              committed to revolutionizing the way individuals learn and excel
+              in their fields. At CertiAI, we harness the power of artificial
+              intelligence to provide cutting-edge solutions in education and
+              assessment.
+            </span>
+          </p>
 
-export default About
+          <p className='font-[500]'>
+            Our mission is to empower learners, educators, and institutions by
+            offering innovative tools and comprehensive learning environments.
+            With a focus on adaptive learning, we tailor our solutions to
+            individual needs, ensuring personalized and effective learning
+            experiences.
+          </p>
+
+          <p className='font-[500]'>
+            Together, we strive to create a seamless ecosystem that fosters
+            knowledge acquisition, skill development, and professional growth.
+          </p>
+
+          <p className="font-medium font-[500]">
+            Join us on this transformative journey as we shape the future of
+            learning with CertiAI!
+          </p>
+        </div>
+      </div>
+
+      {/* Right Image */}
+      <div className="flex-1  flex justify-center max-lg:hidden">
+        <img
+          src={Hero}
+          alt="About Illustration"
+          className="max-w-[520px]  w-full"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default About;

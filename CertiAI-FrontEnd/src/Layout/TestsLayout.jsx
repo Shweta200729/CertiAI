@@ -11,7 +11,7 @@ const TestsLayout = () => {
         <TestTakerDashboard />
     
       {/* Right Content Area */}
-      <div className=" bg-gray-200 px-5 ml-[20%]  " >
+      <div className=" bg-gray-200 px-5 py-3 my-3 ml-[20%]  " >
         <Outlet />
       </div>
     </div>

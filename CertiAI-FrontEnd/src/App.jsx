@@ -43,8 +43,21 @@ import ManageTests from "./InstructorDashboard/InstructorDashboardPage/ManageTes
 import YourPayments from "./InstructorDashboard/InstructorDashboardPage/YourPayments";
 import InstructorDashboardLayout from "./Layout/InstructorDashboardLayout";
 import TestTakerPPurchased from "./TestTakerDashboard/TeastTakerDashboardPage/TestTakerPPurchased"
+import { useEffect } from "react";
+import axios from "axios";
 
 function App() {
+   useEffect(() => {
+    axios.get("http://127.0.0.1:8000/api/test/")
+      .then((res) => {
+        console.log(res.data.message);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -116,6 +129,7 @@ function App() {
 
   return (
     <>
+    {console.log(<h1>React + Django Connected</h1>)}
       <RouterProvider router={router} />
 
       {/* <LayoutDashboardPage/> */}

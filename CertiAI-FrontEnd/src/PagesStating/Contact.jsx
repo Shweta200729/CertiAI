@@ -1,9 +1,52 @@
-import React from 'react'
 
-const Contact = () => {
+import Hero from '../assets/Hero.png'
+const ContactUs = () => {
   return (
-    <div>Contact Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illum non consectetur voluptate maxime, natus accusamus, recusandae impedit error ea temporibus placeat possimus. Amet repellat dignissimos, totam beatae inventore adipisci optio quidem corrupti ab, quaerat blanditiis tempore rem enim, cupiditate sit nostrum eius magnam ipsam perferendis. Praesentium recusandae harum, dignissimos, beatae ut pariatur fuga nihil accusamus repellendus aperiam rem aliquam! Inventore, quisquam est ipsum, assumenda repellendus nulla earum nihil sit delectus expedita nobis, hic iste quaerat exercitationem? Ex fuga amet, nihil non sint eveniet excepturi. Esse nulla iste necessitatibus? Debitis placeat voluptatum officiis non hic labore laborum asperiores enim exercitationem ut, saepe ad! Repellendus sit sed sunt commodi maxime obcaecati, quibusdam corporis quisquam, eveniet at veritatis dolorem ea saepe voluptatibus eligendi laborum. Aliquid incidunt obcaecati aperiam quam ipsum consequuntur? A, possimus earum? Dolorum, nesciunt. Laboriosam tempore quos quo, aut cum a aliquam et omnis sed atque cupiditate molestias, possimus ut consequatur. Beatae id consequatur delectus distinctio asperiores ea architecto repellendus a ab, dolor iusto obcaecati expedita accusamus modi deleniti quod. Autem eius iure illo veritatis facere exercitationem. Ullam harum, dolores delectus at quasi architecto repellat ut molestiae cupiditate unde eos vero labore consequatur tempora maiores beatae quis mollitia repellendus iusto?</div>
-  )
-}
+    <section className="min-h-screen bg-gradient-to-r from-[#fde9ea] to-white flex items-center px-20 font-poppins max-lg:px-6">
+      
+      {/* Left Content */}
+      <div className="flex-1 mb-50">
+        <h2 className="text-4xl font-bold text-black mb-6 border-b-4 border-black inline-block">
+          Contact US
+        </h2>
 
-export default Contact
+        <p className="text-sm text-gray-800 max-w-[520px] mb-6">
+          Have a question or want to learn more about <strong>CertiAI?</strong>{" "}
+          Get in touch with us!
+        </p>
+
+        <div className="space-y-2 text-sm text-gray-900 mb-6">
+          <p>
+            <strong>Address:</strong> [Your Physical Address or Headquarters]
+          </p>
+          <p>
+            <strong>Email:</strong>{" "}
+            <span className="text-[#e74c3c]">contact@certiai.com</span>
+          </p>
+          <p>
+            <strong>Phone:</strong> [+1 (XXX) XXX-XXXX]
+          </p>
+          <p>
+            <strong>Social Media:</strong> [Links to your social media profiles]
+          </p>
+        </div>
+
+        <p className="text-sm text-gray-700 max-w-[520px]">
+          We value your feedback and inquiries. Reach out to our team, and
+          we&apos;ll be delighted to assist you.
+        </p>
+      </div>
+
+      {/* Right Image */}
+      <div className="flex-1 flex justify-center max-lg:hidden">
+        <img
+          src={Hero}
+          alt="Contact Illustration"
+          className="max-w-[520px]  w-full"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default ContactUs;
